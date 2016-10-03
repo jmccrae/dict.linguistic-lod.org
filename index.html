@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Linguistic Linked Open Data Dictionary</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">Linguistic LOD Dictionary</a>
+        </div>
+      </div>
+  </nav>
+
+  <div class="container" style="padding-top:100px;">
+      <div class="row">
+          <form class="form" id="search">
+              <div class="form-group">
+                  <div class="col-sm-9">
+                      <input type="text" id="lemma" class="form-control" placeholder="Search for a word" required autofocus>
+                  </div>
+                  <div class="col-sm-3">
+                      <select class="selectpicker pull-right" id="lang" data-live-search="true">
+                          <option value="en">English</option>
+                          <option value="ab">Abkhazian</option>
+                          <option value="aa">Afar</option>
+                          <option value="af">Afrikaans</option>
+                          <option value="ak">Akan</option>
+                          <option value="sq">Albanian</option>
+                          <OPTION VALUE="am">Amharic</OPTION>
+                          <OPTION VALUE="ar">Arabic</OPTION>
+                          <OPTION VALUE="an">Aragonese</OPTION>
+                          <OPTION VALUE="as">Assamese</OPTION>
+                          <OPTION VALUE="hy">Armenian</OPTION>
+                          <OPTION VALUE="av">Avaric</OPTION>
+                          <OPTION VALUE="ae">Avestan</OPTION>
+                          <OPTION VALUE="ay">Aymara</OPTION>
+                          <OPTION VALUE="az">Azerbaijani</OPTION>
+                          <OPTION VALUE="ba">Bashkir</OPTION>
+                          <OPTION VALUE="bm">Bambara</OPTION>
+                          <OPTION VALUE="eu">Basque</OPTION>
+                          <OPTION VALUE="be">Belarusian</OPTION>
+                          <OPTION VALUE="bn">Bengali</OPTION>
+                          <OPTION VALUE="bh">Bihari</OPTION>
+                          <OPTION VALUE="bi">Bislama</OPTION>
+                          <OPTION VALUE="bs">Bosnian</OPTION>
+                          <OPTION VALUE="br">Breton</OPTION>
+                          <OPTION VALUE="bg">Bulgarian</OPTION>
+                          <OPTION VALUE="my">Burmese</OPTION>
+                          <OPTION VALUE="ca">Catalan</OPTION>
+                          <OPTION VALUE="ch">Chamorro</OPTION>
+                          <OPTION VALUE="ce">Chechen</OPTION>
+                          <OPTION VALUE="ny">Chichewa</OPTION>
+                          <OPTION VALUE="zh">Chinese</OPTION>
+                          <OPTION VALUE="cv">Chuvash</OPTION>
+                          <OPTION VALUE="kw">Cornish</OPTION>
+                          <OPTION VALUE="co">Corsican</OPTION>
+                          <OPTION VALUE="cr">Cree</OPTION>
+                          <OPTION VALUE="hr">Croatian</OPTION>
+                          <OPTION VALUE="cs">Czech</OPTION>
+                          <OPTION VALUE="da">Danish</OPTION>
+                          <OPTION VALUE="dv">Divehi</OPTION>
+                          <OPTION VALUE="dz">Dzongkha</OPTION>
+                          <OPTION VALUE="en">English</OPTION>
+                          <OPTION VALUE="eo">Esperanto</OPTION>
+                          <OPTION VALUE="et">Estonian</OPTION>
+                          <OPTION VALUE="ee">Ewe</OPTION>
+                          <OPTION VALUE="fo">Faroese</OPTION>
+                          <OPTION VALUE="fj">Fijian</OPTION>
+                          <OPTION VALUE="fi">Finnish</OPTION>
+                          <OPTION VALUE="fr">French</OPTION>
+                          <OPTION VALUE="ff">Fula</OPTION>
+                          <OPTION VALUE="gl">Galician</OPTION>
+                          <OPTION VALUE="de">German</OPTION>
+                          <OPTION VALUE="el">Greek</OPTION>
+                          <OPTION VALUE="gn">Guarani</OPTION>
+                          <OPTION VALUE="gu">Gujarati</OPTION>
+                          <OPTION VALUE="ht">Haitian</OPTION>
+                          <OPTION VALUE="ha">Hausa</OPTION>
+                          <OPTION VALUE="he">Hebrew</OPTION>
+                          <OPTION VALUE="hz">Herero</OPTION>
+                          <OPTION VALUE="hi">Hindi</OPTION>
+                          <OPTION VALUE="ho">Hiri Motu</OPTION>
+                          <OPTION VALUE="hu">Hungarian</OPTION>
+                          <OPTION VALUE="ia">Interlingua</OPTION>
+                          <OPTION VALUE="id">Indonesian</OPTION>
+                          <OPTION VALUE="ie">Interlingue</OPTION>
+                          <OPTION VALUE="ga">Irish</OPTION>
+                          <OPTION VALUE="ig">Igbo</OPTION>
+                          <OPTION VALUE="ii">Sichuan Yi</OPTION>
+                          <OPTION VALUE="ik">Inupiaq</OPTION>
+                          <OPTION VALUE="io">Ido</OPTION>
+                          <OPTION VALUE="is">Icelandic</OPTION>
+                          <OPTION VALUE="it">Italian</OPTION>
+                          <OPTION VALUE="iu">Inuktitut</OPTION>
+                          <OPTION VALUE="ja">Japanese</OPTION>
+                          <OPTION VALUE="jv">Javanese</OPTION>
+                          <OPTION VALUE="ka">Georgian</OPTION>
+                          <OPTION VALUE="kg">Kongo</OPTION>
+                          <OPTION VALUE="ki">Kikuyu</OPTION>
+                          <OPTION VALUE="kj">Kwanyama</OPTION>
+                          <OPTION VALUE="kk">Kazakh</OPTION>
+                          <OPTION VALUE="kl">Kalaallisut</OPTION>
+                          <OPTION VALUE="km">Khmer</OPTION>
+                          <OPTION VALUE="kn">Kannada</OPTION>
+                          <OPTION VALUE="ko">Korean</OPTION>
+                          <OPTION VALUE="kr">Kanuri</OPTION>
+                          <OPTION VALUE="ks">Kashmiri</OPTION>
+                          <OPTION VALUE="ku">Kurdish</OPTION>
+                          <OPTION VALUE="kv">Komi</OPTION>
+                          <OPTION VALUE="ky">Kirghiz</OPTION>
+                          <OPTION VALUE="la">Latin</OPTION>
+                          <OPTION VALUE="lb">Luxembourgish</OPTION>
+                          <OPTION VALUE="lg">Luganda</OPTION>
+                          <OPTION VALUE="li">Limburgish</OPTION>
+                          <OPTION VALUE="ln">Lingala</OPTION>
+                          <OPTION VALUE="lo">Lao</OPTION>
+                          <OPTION VALUE="lt">Lithuanian</OPTION>
+                          <OPTION VALUE="lu">Luba Katanga</OPTION>
+                          <OPTION VALUE="lv">Latvian</OPTION>
+                          <OPTION VALUE="mg">Malagasy</OPTION>
+                          <OPTION VALUE="mh">Marshallese</OPTION>
+                          <OPTION VALUE="gv">Manx</OPTION>
+                          <OPTION VALUE="mi">Maori</OPTION>
+                          <OPTION VALUE="mk">Macedonian</OPTION>
+                          <OPTION VALUE="ml">Malayalam</OPTION>
+                          <OPTION VALUE="mn">Mongolian</OPTION>
+                          <OPTION VALUE="mr">Marathi</OPTION>
+                          <OPTION VALUE="ms">Malay</OPTION>
+                          <OPTION VALUE="mt">Maltese</OPTION>
+                          <OPTION VALUE="na">Nauru</OPTION>
+                          <OPTION VALUE="nb">Norwegian Bokmal</OPTION>
+                          <OPTION VALUE="nd">North Ndebele</OPTION>
+                          <OPTION VALUE="ne">Nepali</OPTION>
+                          <OPTION VALUE="ng">Ndonga</OPTION>
+                          <OPTION VALUE="nl">Dutch</OPTION>
+                          <OPTION VALUE="nn">Norwegian Nynorsk</OPTION>
+                          <OPTION VALUE="no">Norwegian</OPTION>
+                          <OPTION VALUE="nr">South Ndebele</OPTION>
+                          <OPTION VALUE="nv">Navajo</OPTION>
+                          <OPTION VALUE="oc">Occitan</OPTION>
+                          <OPTION VALUE="oj">Ojibwa</OPTION>
+                          <OPTION VALUE="cu">Old Church Slavonic</OPTION>
+                          <OPTION VALUE="om">Oromo</OPTION>
+                          <OPTION VALUE="or">Oriya</OPTION>
+                          <OPTION VALUE="os">Ossetian</OPTION>
+                          <OPTION VALUE="pa">Panjabi</OPTION>
+                          <OPTION VALUE="pi">Pali</OPTION>
+                          <OPTION VALUE="fa">Persian</OPTION>
+                          <OPTION VALUE="pl">Polish</OPTION>
+                          <OPTION VALUE="ps">Pashto</OPTION>
+                          <OPTION VALUE="pt">Portuguese</OPTION>
+                          <OPTION VALUE="qu">Quechua</OPTION>
+                          <OPTION VALUE="rm">Romansh</OPTION>
+                          <OPTION VALUE="rn">Kirundi</OPTION>
+                          <OPTION VALUE="ro">Romanian</OPTION>
+                          <OPTION VALUE="ru">Russian</OPTION>
+                          <OPTION VALUE="rw">Kinyarwanda</OPTION>
+                          <OPTION VALUE="sa">Sanskrit</OPTION>
+                          <OPTION VALUE="sc">Sardinian</OPTION>
+                          <OPTION VALUE="sd">Sindhi</OPTION>
+                          <OPTION VALUE="se">Northern Sami</OPTION>
+                          <OPTION VALUE="sm">Samoan</OPTION>
+                          <OPTION VALUE="sg">Sango</OPTION>
+                          <OPTION VALUE="sr">Serbian</OPTION>
+                          <OPTION VALUE="gd">Scottish Gaelic</OPTION>
+                          <OPTION VALUE="sn">Shona</OPTION>
+                          <OPTION VALUE="si">Sinhala</OPTION>
+                          <OPTION VALUE="sk">Slovak</OPTION>
+                          <OPTION VALUE="sl">Slovene</OPTION>
+                          <OPTION VALUE="so">Somali</OPTION>
+                          <OPTION VALUE="st">Southern Sotho</OPTION>
+                          <OPTION VALUE="es">Spanish</OPTION>
+                          <OPTION VALUE="su">Sundanese</OPTION>
+                          <OPTION VALUE="sw">Swahili</OPTION>
+                          <OPTION VALUE="ss">Swati</OPTION>
+                          <OPTION VALUE="sv">Swedish</OPTION>
+                          <OPTION VALUE="ta">Tamil</OPTION>
+                          <OPTION VALUE="te">Telugu</OPTION>
+                          <OPTION VALUE="tg">Tajik</OPTION>
+                          <OPTION VALUE="th">Thai</OPTION>
+                          <OPTION VALUE="ti">Tigrinya</OPTION>
+                          <OPTION VALUE="bo">Tibetan Standard</OPTION>
+                          <OPTION VALUE="tk">Turkmen</OPTION>
+                          <OPTION VALUE="tl">Tagalog</OPTION>
+                          <OPTION VALUE="tn">Tswana</OPTION>
+                          <OPTION VALUE="to">Tonga</OPTION>
+                          <OPTION VALUE="tr">Turkish</OPTION>
+                          <OPTION VALUE="ts">Tsonga</OPTION>
+                          <OPTION VALUE="tt">Tatar</OPTION>
+                          <OPTION VALUE="tw">Twi</OPTION>
+                          <OPTION VALUE="ty">Tahitian</OPTION>
+                          <OPTION VALUE="ug">Uighur</OPTION>
+                          <OPTION VALUE="uk">Ukrainian</OPTION>
+                          <OPTION VALUE="ur">Urdu</OPTION>
+                          <OPTION VALUE="uz">Uzbek</OPTION>
+                          <OPTION VALUE="ve">Venda</OPTION>
+                          <OPTION VALUE="vi">Vietnamese</OPTION>
+                          <OPTION VALUE="vo">Volapuk</OPTION>
+                          <OPTION VALUE="wa">Walloon</OPTION>
+                          <OPTION VALUE="cy">Welsh</OPTION>
+                          <OPTION VALUE="wo">Wolof</OPTION>
+                          <OPTION VALUE="fy">Western Frisian</OPTION>
+                          <OPTION VALUE="xh">Xhosa</OPTION>
+                          <OPTION VALUE="yi">Yiddish</OPTION>
+                          <OPTION VALUE="yo">Yoruba</OPTION>
+                          <OPTION VALUE="za">Zhuang</OPTION>
+                          <OPTION VALUE="zu">Zulu</OPTION>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-group" style="margin-top:7px;">
+                  <button class="btn btn-lg btn-primary pull-right" type="submit">Search</button>
+              </div>
+          </form>
+      </div>
+
+      <div class="row" id="dbnary-results" style="display:none;">
+          <div class="panel panel-default">
+              <div class="panel-heading">DBnary</div>
+              <div class="panel-body">
+                  <ul id="dbnary-ul">
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" id="wordnet-results" style="display:none;">
+          <div class="panel panel-default">
+              <div class="panel-heading">WordNet</div>
+              <div class="panel-body">
+                  <ul id="wordnet-ul">
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" id="dbpedia-results" style="display:none;">
+          <div class="panel panel-default">
+              <div class="panel-heading">DBpedia</div>
+              <div class="panel-body">
+                  <ul id="dbpedia-ul">
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="row" id="babelnet-results" style="display:none;">
+          <div class="panel panel-default">
+              <div class="panel-heading">BabelNet</div>
+              <div class="panel-body">
+                  <ul id="babelnet-ul">
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" id="apertium-results" style="display:none;">
+          <div class="panel panel-default">
+              <div class="panel-heading">Apertium</div>
+              <div class="panel-body">
+                  <ul id="apertium-ul">
+                  </ul>
+              </div>
+          </div>
+      </div>
+   </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap-select.min.js"></script>
+      <script src="js/dict.js"></script>
+      </body>
+</html>
